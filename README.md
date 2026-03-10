@@ -1,16 +1,105 @@
-# React + Vite
+# 🌤️ Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicativo de previsão do tempo construído com React, consumindo a WeatherAPI em tempo real. O usuário pode buscar o clima de qualquer cidade do mundo ou usar a localização GPS do dispositivo.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Funcionalidades
 
-## React Compiler
+- Busca de clima por nome de cidade
+- Busca automática por geolocalização (GPS)
+- Previsão para os próximos 3 dias
+- Fundo da tela muda conforme o clima (sol, chuva, tempestade...)
+- Dica contextual baseada no clima atual ("leva guarda-chuva", "não esquece o protetor solar"...)
+- Indicador visual de dia/noite
+- Umidade e velocidade do vento
+- Acessibilidade com ARIA (aria-live, aria-label, role, aria-invalid)
+- Navegação por teclado com foco visível
+- Validação do campo de busca com feedback visual
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [React](https://react.dev/) — biblioteca de UI com hooks e componentes funcionais
+- [Vite](https://vitejs.dev/) — ferramenta de build e servidor de desenvolvimento
+- [WeatherAPI](https://www.weatherapi.com/) — API de dados climáticos em tempo real
+- CSS puro com Glassmorphism e gradientes dinâmicos
+
+---
+
+## 📁 Estrutura do projeto
+```
+src/
+├── main.jsx
+├── App.jsx
+├── index.css
+│
+├── pages/
+│   ├── Home.jsx
+│   └── home.style.css
+│
+├── components/
+│   ├── SearchBar/
+│   │   ├── index.jsx
+│   │   └── Search_bar.style.css
+│   │
+│   ├── WeatherCard/
+│   │   ├── index.jsx
+│   │   └── weather_card.style.css
+│   │
+│   └── Forecast/
+│       ├── index.jsx
+│       └── forecast.style.css
+│
+└── services/
+    └── weatherApi.js
+```
+
+---
+
+## 🚀 Como rodar localmente
+
+**Pré-requisitos:** Node.js instalado
+```bash
+# clone o repositório
+git clone https://github.com/MathzRod/weather-app.git
+
+# entre na pasta
+cd weather-app
+
+# instale as dependências
+npm install
+
+# crie o arquivo de variáveis de ambiente
+# crie um arquivo .env na raiz com o seguinte conteúdo:
+VITE_WEATHER_API_KEY=sua_chave_aqui
+
+# rode o projeto
+npm run dev
+```
+
+> Você pode obter uma chave gratuita em [weatherapi.com](https://www.weatherapi.com/)
+
+---
+
+## 🧠 Conceitos aplicados
+
+- Componentes funcionais e hooks (`useState`)
+- Comunicação entre componentes via props e lifting state up
+- Renderização condicional e listas com `.map()`
+- Requisições assíncronas com `async/await` e `fetch`
+- Variáveis de ambiente com Vite
+- Acessibilidade web (WCAG / ARIA)
+- Semântica HTML (`main`, `article`, `section`, `ul/li`)
+- CSS dinâmico com troca de classes via JavaScript
+
+---
+
+## 👨‍💻 Autor
+
+**Matheus Rodrigues de Camargo**  
+Estudante de Engenharia da Computação com foco em se tornar Web Developer.  
+Conhecimento em React, JavaScript, acessibilidade web, noções de backend e testes (manuais, Cypress e Playwright).
+
+[![GitHub](https://img.shields.io/badge/GitHub-MathzRod-181717?style=flat&logo=github)](https://github.com/MathzRod/weather-app)

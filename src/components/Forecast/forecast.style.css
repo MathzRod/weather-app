@@ -1,0 +1,32 @@
+.forecast {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+}
+
+.forecast-day {
+  background: rgba(255,255,255,0.1);
+  padding: 10px 8px;
+  border-radius: 12px;
+  text-align: center;
+  flex: 1; /* divide o espaço igualmente em vez de width fixo */
+}
+
+.forecast-day img {
+  width: 32px;
+  height: 32px;
+}
+
+.forecast-day p {
+  font-size: 13px;
+  margin: 0;
+}
+
+.dataTexto {
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+  opacity: 0.85;
+}

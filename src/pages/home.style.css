@@ -1,0 +1,60 @@
+.app {
+  width: 95%;
+  max-width: 480px;
+  background: rgba(109, 109, 109, 0.6);
+  padding: 24px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  /* evita scroll ocupando só a altura da tela */
+  max-height: 96vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  /* esconde a scrollbar mas mantém o scroll funcional */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.app::-webkit-scrollbar {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 22px;
+}
+
+.error-message {
+  color: #f76d6d;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sunny {
+  background: linear-gradient(180deg, #f5e297, #f1aa77);
+}
+
+.cloudy {
+  background: linear-gradient(180deg, #94a3b8, #475569);
+}
+
+.rainy {
+  background: linear-gradient(180deg, #334155, #0f172a);
+}
+
+.storm {
+  background: linear-gradient(180deg, #1e293b, #020617);
+}
+
+.snow {
+  background: linear-gradient(180deg, #e2e8f0, #94a3b8);
+}
+
+.default {
+  background: linear-gradient(180deg, #1e3a8a, #0f172a);
+}
